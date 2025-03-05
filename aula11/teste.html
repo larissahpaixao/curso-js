@@ -24,28 +24,45 @@
             font-style: normal;
             font-size: 50px;
             color: rgb(235, 28, 28);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.479);
         }
 
+        section {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.527);
+        }
+
+        div {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
     </style>
 </head>
 <body>
+    <section>
     <h1>Você é o amor da minha vida?</h1>
     Digite seu nome: <input type="text" name="nome" id="inome">
     <input type="button" value="Verificar" onclick="calcular()">
     <div id="res">
 
     </div>
+    </section>
 </body>
 <script>
     function calcular (){
     var nome = window.document.getElementById('inome')
     var res = window.document.querySelector('div#res')
     var n = String(nome.value)
+    
         if (n == 'Caio') {
             res.innerHTML = '<p>Você é o amor da minha vida! &#x1F60D Te amo! </p>'
         } else {
             res.innerHTML = '<p>Você não é o amor da minha vida! &#x1F61E  </p>'
         }
+        
     }
     </script>
